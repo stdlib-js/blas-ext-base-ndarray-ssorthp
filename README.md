@@ -48,6 +48,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import ssorthp from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-ssorthp@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-ext-base-ndarray-ssorthp/tags). For example,
+
+```javascript
 import ssorthp from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-ssorthp@v0.1.1-esm/index.mjs';
 ```
 
@@ -111,7 +116,7 @@ import ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ctor@esm
 import scalar2ndarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-from-scalar@esm/index.mjs';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-to-array@esm/index.mjs';
 import ndarraylike2scalar from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-ndarraylike2scalar@esm/index.mjs';
-import ssorthp from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-ssorthp@v0.1.1-esm/index.mjs';
+import ssorthp from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-ext-base-ndarray-ssorthp@esm/index.mjs';
 
 var xbuf = discreteUniform( 10, -100, 100, {
     'dtype': 'float32'
