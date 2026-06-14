@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-10)
+## Unreleased (2026-06-14)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`fcca435`](https://github.com/stdlib-js/stdlib/commit/fcca4355ad6d547eb04701c573cd151fe74adf88) - **docs:** update `blas/ext/base/ndarray` scalar helper imports [(#12880)](https://github.com/stdlib-js/stdlib/pull/12880) _(by Karan Anand)_
 -   [`0603c79`](https://github.com/stdlib-js/stdlib/commit/0603c797369a3db5d8cc79bca4f42b6379b6c40b) - **chore:** modernize examples and benchmarks _(by Athan Reines)_
 -   [`e0c37cb`](https://github.com/stdlib-js/stdlib/commit/e0c37cb6b44afd455dd85f7b24021c6fe53cd1bf) - **docs:** improve doctests for ndarray instances in `blas/ext/ndarray/ssorthp` [(#11547)](https://github.com/stdlib-js/stdlib/pull/11547) _(by Uday Kakade)_
 -   [`328ca77`](https://github.com/stdlib-js/stdlib/commit/328ca7797c1446568242d8bbd510129396fe3af0) - **docs:** fix notes _(by Athan Reines)_
