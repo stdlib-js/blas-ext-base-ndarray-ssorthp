@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,33 +16,43 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { typedndarray, float32ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Sort a one-dimensional single-precision floating-point ndarray using heapsort.
+* Sorts a one-dimensional single-precision floating-point ndarray using heapsort.
 *
-* @module @stdlib/blas-ext-base-ndarray-ssorthp
+* ## Notes
+*
+* -   The function expects the following ndarrays:
+*
+*     -   a one-dimensional input ndarray.
+*     -   a zero-dimensional ndarray specifying the sort order.
+*
+* -   When the sort order is less than zero, the input ndarray is sorted in **decreasing** order. When the sort order is greater than zero, the input ndarray is sorted in **increasing** order. When the sort order is equal to zero, the input ndarray is left unchanged.
+*
+* @param arrays - array-like object containing ndarrays
+* @returns input ndarray
 *
 * @example
 * var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
 * var scalar2ndarray = require( '@stdlib/ndarray-from-scalar' );
-* var ssorthp = require( '@stdlib/blas-ext-base-ndarray-ssorthp' );
 *
 * var x = new Float32Vector( [ 1.0, -2.0, 3.0, -4.0 ] );
 *
 * var ord = scalar2ndarray( 1.0, {
-*    'dtype': 'generic'
+*     'dtype': 'generic'
 * });
 *
 * var out = ssorthp( [ x, ord ] );
 * // returns <ndarray>[ -4.0, -2.0, 1.0, 3.0 ]
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function ssorthp( arrays: [ float32ndarray, typedndarray<number> ] ): float32ndarray;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = ssorthp;
