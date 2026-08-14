@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,19 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var ndarraylike2scalar = require( '@stdlib/ndarray-base-ndarraylike2scalar' );
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-ext-base-ssorthp' ).ndarray;
-
-
-// MAIN //
+import { typedndarray, float32ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Sorts a one-dimensional single-precision floating-point ndarray using heapsort.
@@ -42,8 +34,8 @@ var strided = require( '@stdlib/blas-ext-base-ssorthp' ).ndarray;
 *
 * -   When the sort order is less than zero, the input ndarray is sorted in **decreasing** order. When the sort order is greater than zero, the input ndarray is sorted in **increasing** order. When the sort order is equal to zero, the input ndarray is left unchanged.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {ndarray} input ndarray
+* @param arrays - array-like object containing ndarrays
+* @returns input ndarray
 *
 * @example
 * var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
@@ -58,19 +50,9 @@ var strided = require( '@stdlib/blas-ext-base-ssorthp' ).ndarray;
 * var out = ssorthp( [ x, ord ] );
 * // returns <ndarray>[ -4.0, -2.0, 1.0, 3.0 ]
 */
-function ssorthp( arrays ) {
-	var ord;
-	var x;
-
-	x = arrays[ 0 ];
-	ord = ndarraylike2scalar( arrays[ 1 ] );
-
-	strided( numelDimension( x, 0 ), ord, getData( x ), getStride( x, 0 ), getOffset( x ) ); // eslint-disable-line max-len
-
-	return x;
-}
+declare function ssorthp( arrays: [ float32ndarray, typedndarray<number> ] ): float32ndarray;
 
 
 // EXPORTS //
 
-module.exports = ssorthp;
+export = ssorthp;
